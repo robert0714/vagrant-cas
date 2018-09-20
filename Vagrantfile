@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "cas" do |d|
     d.vm.box = "bento/centos-7.5"
     d.vm.hostname = "cas"
-//  d.vm.network "private_network", ip: "10.100.195.200"
+##  d.vm.network "private_network", ip: "10.100.195.200"
     d.vm.network "forwarded_port", guest: 9443, host: 9443
     d.vm.provider "virtualbox" do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]            
